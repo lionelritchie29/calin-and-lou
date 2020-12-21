@@ -65,6 +65,10 @@ module.exports = {
                     to: path.resolve(__dirname, 'dist/assets/images'),
                 },
                 {
+                    from: path.resolve(__dirname, 'src/public/icons'),
+                    to: path.resolve(__dirname, 'dist/assets/icons')
+                },
+                {
                     context: 'node_modules/@webcomponents/webcomponentsjs/',
                     from: '**/*.js',
                     to: 'webcomponents'

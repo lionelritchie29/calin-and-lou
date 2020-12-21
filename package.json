@@ -34,7 +34,7 @@
   "dependencies": {
     "lit-element": "^2.4.0"
   },
-  "browserslist" : [
+  "browserslist": [
     ">2%",
     "Edge > 14",
     "Firefox > 63",
