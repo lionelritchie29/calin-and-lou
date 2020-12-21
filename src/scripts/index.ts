@@ -1,6 +1,7 @@
 import '../styles/styles.css';
+import './components/app-root.ts';
 
-class Test {
+class Main {
     private hayo:string = "bacot";
 
     constructor() {
@@ -8,4 +9,4 @@ class Test {
     }
 }
 
-new Test();
+new Main();

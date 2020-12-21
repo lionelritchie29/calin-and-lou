@@ -1,9 +1,14 @@
 {
     "compilerOptions": {
         "noImplicitAny": true,
-        "target": "ES5",
-        "module": "ES2015",
-        "sourceMap": true,
-        "importsNotUsedAsValues": "preserve"
+        "target": "es6",
+        "module": "es6",
+        // "sourceMap": true,
+        "importsNotUsedAsValues": "preserve",
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "strict": true,
+        "jsx": "react",
+        "allowJs": true
     }
 }

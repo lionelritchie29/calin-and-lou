@@ -63,8 +63,13 @@ module.exports = {
                 {
                     from: path.resolve(__dirname, 'src/public/images'),
                     to: path.resolve(__dirname, 'dist/assets/images'),
-                }
-            ]
+                },
+                {
+                    context: 'node_modules/@webcomponents/webcomponentsjs/',
+                    from: '**/*.js',
+                    to: 'webcomponents'
+                },
+            ],
         }),
         new MiniCssExtractPlugin(),
         new ForkTsCheckerWebpackPlugin(),

@@ -13,6 +13,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
     "autoprefixer": "^10.1.0",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^6.0.3",
@@ -29,5 +30,14 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.7.2"
-  }
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  },
+  "browserslist" : [
+    ">2%",
+    "Edge > 14",
+    "Firefox > 63",
+    "Chrome > 67"
+  ]
 }
