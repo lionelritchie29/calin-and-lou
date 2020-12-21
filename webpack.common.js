@@ -2,15 +2,26 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src/scripts/index.js'),
+    entry: path.resolve(__dirname, 'src/scripts/index.ts'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    module : {
+    module : { 
         rules: [
+            {
+                test: /\.tsx?$/,
+                use: {
+                    loader: 'ts-loader',
+                    options: {
+                        transpileOnly: true,
+                    },
+                },
+                exclude: /node_modules/,
+            },
             {
                 test: /\.css$/i,
                 exclude: /node_modules/,
@@ -39,6 +50,9 @@ module.exports = {
             }
         ],
     },
+    resolve: {
+        extensions: [ '.ts', '.js' ],
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/templates/index.html'),
@@ -53,5 +67,6 @@ module.exports = {
             ]
         }),
         new MiniCssExtractPlugin(),
+        new ForkTsCheckerWebpackPlugin(),
     ]
 }
